@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Custody Landscape | Enterprise Ethereum Alliance</title>
+    <meta name="description" content="A comprehensive guide to digital asset custody for institutional decision-makers. Understanding custody models, providers, and frameworks.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">EEA</span>
+                <span class="logo-divider"></span>
+                <span class="logo-subtitle">Custody Landscape</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#what-is-custody">What is Custody</a></li>
+                <li><a href="#why-it-matters">Why It Matters</a></li>
+                <li><a href="#custody-models">Models</a></li>
+                <li><a href="#framework">Framework</a></li>
+                <li><a href="#landscape">Landscape</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#engagement">Engagement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Enterprise Ethereum Alliance Research</div>
+            <h1>The Institutional Crypto Custody Landscape</h1>
+            <p class="hero-subtitle">A framework for understanding digital asset custody: models, providers, and decision criteria for institutional participants</p>
+            <div class="hero-cta">
+                <a href="#framework" class="btn btn-primary">Explore the Framework</a>
+                <a href="#landscape" class="btn btn-secondary">View Provider Landscape</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <svg viewBox="0 0 400 300" class="hero-illustration" aria-hidden="true">
+                <defs>
+                    <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+                        <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.1" />
+                    </linearGradient>
+                    <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6" />
+                        <stop offset="100%" style="stop-color:#8b5cf6" />
+                    </linearGradient>
+                </defs>
+                <!-- Abstract custody visualization -->
+                <circle cx="200" cy="150" r="100" fill="url(#heroGrad1)" stroke="url(#heroGrad2)" stroke-width="2"/>
+                <circle cx="200" cy="150" r="70" fill="none" stroke="url(#heroGrad2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <circle cx="200" cy="150" r="40" fill="none" stroke="url(#heroGrad2)" stroke-width="1"/>
+                <!-- Key icon in center -->
+                <g transform="translate(185, 135)">
+                    <rect x="8" y="0" width="14" height="18" rx="7" fill="none" stroke="url(#heroGrad2)" stroke-width="2"/>
+                    <rect x="12" y="18" width="6" height="16" fill="url(#heroGrad2)"/>
+                    <rect x="18" y="26" width="8" height="3" fill="url(#heroGrad2)"/>
+                    <rect x="18" y="31" width="5" height="3" fill="url(#heroGrad2)"/>
+                </g>
+                <!-- Orbit nodes -->
+                <circle cx="200" cy="50" r="8" fill="url(#heroGrad2)"/>
+                <circle cx="290" cy="115" r="6" fill="#3b82f6"/>
+                <circle cx="290" cy="185" r="6" fill="#8b5cf6"/>
+                <circle cx="200" cy="250" r="8" fill="url(#heroGrad2)"/>
+                <circle cx="110" cy="185" r="6" fill="#8b5cf6"/>
+                <circle cx="110" cy="115" r="6" fill="#3b82f6"/>
+                <!-- Connection lines -->
+                <line x1="200" y1="58" x2="200" y2="110" stroke="url(#heroGrad2)" stroke-width="1" opacity="0.5"/>
+                <line x1="284" y1="118" x2="240" y2="135" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+                <line x1="284" y1="182" x2="240" y2="165" stroke="#8b5cf6" stroke-width="1" opacity="0.5"/>
+                <line x1="200" y1="242" x2="200" y2="190" stroke="url(#heroGrad2)" stroke-width="1" opacity="0.5"/>
+                <line x1="116" y1="182" x2="160" y2="165" stroke="#8b5cf6" stroke-width="1" opacity="0.5"/>
+                <line x1="116" y1="118" x2="160" y2="135" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <!-- What is Custody Section -->
+        <section id="what-is-custody" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>What is Crypto Custody?</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p class="lead">Crypto custody refers to the secure storage and management of private keys that control access to digital assets on blockchain networks.</p>
+
+                        <p>Unlike traditional financial assets, cryptocurrencies and digital tokens exist as entries on distributed ledgers. Ownership is determined not by a central registry, but by possession of cryptographic private keys. Whoever controls the private key controls the assets—making secure custody a fundamental requirement for any institutional participant.</p>
+
+                        <h3>Core Components of Custody</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                                    </svg>
+                                </div>
+                                <h4>Key Generation</h4>
+                                <p>Creating cryptographic key pairs using secure random number generation in isolated environments</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </div>
+                                <h4>Key Storage</h4>
+                                <p>Protecting private keys from theft, loss, or unauthorized access through hardware and software controls</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h4>Access Control</h4>
+                                <p>Defining and enforcing policies for who can initiate transactions and under what conditions</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                    </svg>
+                                </div>
+                                <h4>Transaction Signing</h4>
+                                <p>Using private keys to authorize blockchain transactions while maintaining security controls</p>
+                            </div>
+                        </div>
+
+                        <h3>Traditional vs. Crypto Custody</h3>
+                        <p>In traditional finance, custody involves holding securities or cash on behalf of clients, typically through a regulated intermediary. The custodian maintains records and facilitates transfers but doesn't directly "possess" the assets in the way a crypto custodian controls private keys.</p>
+                        <p>With digital assets, the custodian's control is more direct and consequential: access to the private key means full control over the assets. This creates both opportunities for streamlined operations and significant security responsibilities.</p>
+                    </div>
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Key Insight</h4>
+                            <p>"Not your keys, not your coins" captures the fundamental principle: in crypto, custody is control. The entity holding the private keys has effective ownership of the assets.</p>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Scale of the Market</h4>
+                            <p>Institutional crypto custody is estimated to secure hundreds of billions in digital assets globally, with continued growth as traditional financial institutions enter the space.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why It Matters Section -->
+        <section id="why-it-matters" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>Why Custody Matters for Institutions</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p class="lead">For institutional participants—asset managers, corporations, funds, and financial services firms—custody is not merely a technical concern but a foundational business and regulatory requirement.</p>
+
+                        <h3>Fiduciary Obligations</h3>
+                        <p>Investment advisers and fund managers are typically required to maintain client assets with a "qualified custodian." This regulatory framework, designed to protect investors, extends to digital assets and shapes how institutions must approach custody.</p>
+
+                        <h3>Operational Risk Management</h3>
+                        <p>The irreversible nature of blockchain transactions means that errors or security breaches can result in permanent loss. Institutions require robust operational controls, segregation of duties, and disaster recovery capabilities that exceed what individual custody solutions might provide.</p>
+
+                        <h3>Insurance and Liability</h3>
+                        <p>Professional custody arrangements typically include insurance coverage and clear liability frameworks. For institutions managing third-party assets, this protection is essential for both regulatory compliance and client confidence.</p>
+
+                        <div class="highlight-box">
+                            <h4>Regulatory Considerations</h4>
+                            <ul>
+                                <li><strong>SEC Custody Rule:</strong> Investment advisers must maintain client assets with qualified custodians</li>
+                                <li><strong>Bank Charters:</strong> Some custodians operate under national or state bank charters, providing regulatory clarity</li>
+                                <li><strong>SOC Compliance:</strong> Service Organization Control audits validate operational controls</li>
+                                <li><strong>Geographic Requirements:</strong> Different jurisdictions have varying custody requirements</li>
+                            </ul>
+                        </div>
+
+                        <h3>Business Continuity</h3>
+                        <p>Institutions require assurance that their assets remain accessible even if a custody provider faces operational or financial difficulties. This necessitates careful evaluation of provider stability, key recovery mechanisms, and legal protections.</p>
+                    </div>
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card sidebar-card-warning">
+                            <h4>Risk Factors</h4>
+                            <ul>
+                                <li>Private key theft or loss</li>
+                                <li>Insider threats</li>
+                                <li>Smart contract vulnerabilities</li>
+                                <li>Counterparty risk</li>
+                                <li>Regulatory uncertainty</li>
+                                <li>Operational failures</li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Due Diligence Areas</h4>
+                            <ul>
+                                <li>Security architecture</li>
+                                <li>Regulatory status</li>
+                                <li>Insurance coverage</li>
+                                <li>Audit history</li>
+                                <li>Key management approach</li>
+                                <li>Disaster recovery</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custody Models Section -->
+        <section id="custody-models" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>Custody Models Explained</h2>
+                </div>
+                <p class="section-intro">Custody solutions exist on a spectrum from full self-custody to complete delegation to third parties. Each model involves different trade-offs between control, security, convenience, and regulatory treatment.</p>
+
+                <!-- Custody Taxonomy Diagram -->
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Custody Model Taxonomy</h3>
+                    <div class="diagram-wrapper">
+                        <svg viewBox="0 0 900 500" class="taxonomy-diagram" aria-labelledby="taxonomyTitle taxonomyDesc">
+                            <title id="taxonomyTitle">Custody Model Taxonomy Diagram</title>
+                            <desc id="taxonomyDesc">A hierarchical diagram showing the spectrum of custody models from self-custody to third-party custody</desc>
+                            <defs>
+                                <linearGradient id="selfGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#10b981"/>
+                                    <stop offset="100%" style="stop-color:#059669"/>
+                                </linearGradient>
+                                <linearGradient id="hybridGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#f59e0b"/>
+                                    <stop offset="100%" style="stop-color:#d97706"/>
+                                </linearGradient>
+                                <linearGradient id="thirdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6"/>
+                                    <stop offset="100%" style="stop-color:#2563eb"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Header -->
+                            <text x="450" y="35" text-anchor="middle" class="diagram-header">Custody Model Spectrum</text>
+
+                            <!-- Control Axis -->
+                            <line x1="50" y1="70" x2="850" y2="70" stroke="#e5e7eb" stroke-width="2"/>
+                            <text x="50" y="60" class="axis-label">Full Control</text>
+                            <text x="850" y="60" text-anchor="end" class="axis-label">Full Delegation</text>
+                            <polygon points="45,70 55,65 55,75" fill="#6b7280"/>
+                            <polygon points="855,70 845,65 845,75" fill="#6b7280"/>
+
+                            <!-- Self-Custody Column -->
+                            <rect x="50" y="100" width="250" height="380" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+                            <rect x="50" y="100" width="250" height="50" rx="8" fill="url(#selfGrad)"/>
+                            <text x="175" y="132" text-anchor="middle" class="model-title" fill="white">Self-Custody</text>
+
+                            <g transform="translate(70, 170)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Hardware Wallets</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Dedicated signing devices</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">held by institution</text>
+                            </g>
+
+                            <g transform="translate(70, 255)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Air-Gapped Systems</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Offline key generation</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">and storage</text>
+                            </g>
+
+                            <g transform="translate(70, 340)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Multi-Sig (Self-Managed)</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Multiple internal</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">signers required</text>
+                            </g>
+
+                            <g transform="translate(70, 425)">
+                                <circle cx="10" cy="10" r="6" fill="#10b981"/>
+                                <text x="25" y="14" class="model-trait">Maximum control</text>
+                            </g>
+                            <g transform="translate(70, 445)">
+                                <circle cx="10" cy="10" r="6" fill="#10b981"/>
+                                <text x="25" y="14" class="model-trait">Requires expertise</text>
+                            </g>
+                            <g transform="translate(70, 465)">
+                                <circle cx="10" cy="10" r="6" fill="#10b981"/>
+                                <text x="25" y="14" class="model-trait">Full responsibility</text>
+                            </g>
+
+                            <!-- Hybrid Column -->
+                            <rect x="325" y="100" width="250" height="380" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+                            <rect x="325" y="100" width="250" height="50" rx="8" fill="url(#hybridGrad)"/>
+                            <text x="450" y="132" text-anchor="middle" class="model-title" fill="white">Hybrid / Shared</text>
+
+                            <g transform="translate(345, 170)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">MPC Wallets</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Key shares distributed</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">across parties</text>
+                            </g>
+
+                            <g transform="translate(345, 255)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Co-Managed Multi-Sig</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Keys held by client</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">and provider</text>
+                            </g>
+
+                            <g transform="translate(345, 340)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Qualified Custody + Controls</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Third-party custody with</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">client-defined policies</text>
+                            </g>
+
+                            <g transform="translate(345, 425)">
+                                <circle cx="10" cy="10" r="6" fill="#f59e0b"/>
+                                <text x="25" y="14" class="model-trait">Balanced control</text>
+                            </g>
+                            <g transform="translate(345, 445)">
+                                <circle cx="10" cy="10" r="6" fill="#f59e0b"/>
+                                <text x="25" y="14" class="model-trait">Shared responsibility</text>
+                            </g>
+                            <g transform="translate(345, 465)">
+                                <circle cx="10" cy="10" r="6" fill="#f59e0b"/>
+                                <text x="25" y="14" class="model-trait">Operational flexibility</text>
+                            </g>
+
+                            <!-- Third-Party Column -->
+                            <rect x="600" y="100" width="250" height="380" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+                            <rect x="600" y="100" width="250" height="50" rx="8" fill="url(#thirdGrad)"/>
+                            <text x="725" y="132" text-anchor="middle" class="model-title" fill="white">Third-Party Custody</text>
+
+                            <g transform="translate(620, 170)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Exchange Custody</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Assets held on</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">trading platform</text>
+                            </g>
+
+                            <g transform="translate(620, 255)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Qualified Custodian</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Regulated entity with</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">fiduciary obligations</text>
+                            </g>
+
+                            <g transform="translate(620, 340)">
+                                <rect width="210" height="70" rx="6" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                <text x="105" y="25" text-anchor="middle" class="model-subtype">Prime Brokerage</text>
+                                <text x="105" y="45" text-anchor="middle" class="model-desc">Custody bundled with</text>
+                                <text x="105" y="60" text-anchor="middle" class="model-desc">trading services</text>
+                            </g>
+
+                            <g transform="translate(620, 425)">
+                                <circle cx="10" cy="10" r="6" fill="#3b82f6"/>
+                                <text x="25" y="14" class="model-trait">Regulatory clarity</text>
+                            </g>
+                            <g transform="translate(620, 445)">
+                                <circle cx="10" cy="10" r="6" fill="#3b82f6"/>
+                                <text x="25" y="14" class="model-trait">Insurance coverage</text>
+                            </g>
+                            <g transform="translate(620, 465)">
+                                <circle cx="10" cy="10" r="6" fill="#3b82f6"/>
+                                <text x="25" y="14" class="model-trait">Counterparty risk</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="model-details">
+                    <div class="model-detail-card">
+                        <h3>Self-Custody</h3>
+                        <p>The institution generates and maintains full control over all private keys. This provides maximum control and eliminates counterparty risk but requires significant technical expertise and operational infrastructure.</p>
+                        <p><strong>Suitable for:</strong> Technically sophisticated organizations with dedicated security teams, those with specific regulatory or policy requirements for key control, or entities with lower transaction volumes that don't require integrated services.</p>
+                    </div>
+                    <div class="model-detail-card">
+                        <h3>Hybrid / Shared Custody</h3>
+                        <p>Control is distributed between the institution and service providers. Multi-party computation (MPC) technology allows cryptographic operations without any single party having access to the complete key. Multi-signature arrangements require multiple parties to authorize transactions.</p>
+                        <p><strong>Suitable for:</strong> Organizations seeking to balance control with operational convenience, those requiring segregation of duties, or entities wanting to reduce single points of failure while maintaining meaningful oversight.</p>
+                    </div>
+                    <div class="model-detail-card">
+                        <h3>Third-Party Custody</h3>
+                        <p>A qualified custodian holds and manages private keys on behalf of the client. This model provides regulatory clarity, insurance coverage, and professional operations but introduces counterparty dependency.</p>
+                        <p><strong>Suitable for:</strong> Regulated investment advisers requiring qualified custodians, organizations without specialized crypto operations teams, or those prioritizing insurance and regulatory compliance over direct control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decision Framework Section -->
+        <section id="framework" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Custody Decision Framework</h2>
+                </div>
+                <p class="section-intro">Selecting a custody approach involves weighing multiple factors specific to your organization. This framework helps structure the evaluation process.</p>
+
+                <!-- Decision Framework Diagram -->
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Decision Framework Flow</h3>
+                    <div class="diagram-wrapper">
+                        <svg viewBox="0 0 900 650" class="framework-diagram" aria-labelledby="frameworkTitle">
+                            <title id="frameworkTitle">Custody Decision Framework Flowchart</title>
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+                                </marker>
+                                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+                                </filter>
+                            </defs>
+
+                            <!-- Start -->
+                            <g transform="translate(350, 20)">
+                                <rect width="200" height="50" rx="25" fill="#3b82f6" filter="url(#shadow)"/>
+                                <text x="100" y="30" text-anchor="middle" fill="white" class="flow-text">Begin Evaluation</text>
+                            </g>
+                            <line x1="450" y1="70" x2="450" y2="100" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                            <!-- Question 1 -->
+                            <g transform="translate(300, 100)">
+                                <polygon points="150,0 300,60 150,120 0,60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="150" y="55" text-anchor="middle" class="decision-text">Regulatory</text>
+                                <text x="150" y="72" text-anchor="middle" class="decision-text">Requirements?</text>
+                            </g>
+
+                            <!-- Branch: Qualified Custodian Required -->
+                            <line x1="600" y1="160" x2="700" y2="160" stroke="#6b7280" stroke-width="2"/>
+                            <text x="650" y="150" text-anchor="middle" class="branch-label">Yes - SEC/Regulated</text>
+                            <line x1="700" y1="160" x2="700" y2="200" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                            <g transform="translate(600, 200)">
+                                <rect width="200" height="60" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="100" y="25" text-anchor="middle" class="box-title">Qualified Custodian</text>
+                                <text x="100" y="45" text-anchor="middle" class="box-subtitle">Required</text>
+                            </g>
+
+                            <!-- Continue from Q1 -->
+                            <line x1="450" y1="220" x2="450" y2="280" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+                            <text x="430" y="250" text-anchor="end" class="branch-label">No / Flexible</text>
+
+                            <!-- Question 2 -->
+                            <g transform="translate(300, 280)">
+                                <polygon points="150,0 300,60 150,120 0,60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="150" y="55" text-anchor="middle" class="decision-text">Internal Crypto</text>
+                                <text x="150" y="72" text-anchor="middle" class="decision-text">Expertise?</text>
+                            </g>
+
+                            <!-- Branch: Low expertise -->
+                            <line x1="300" y1="340" x2="150" y2="340" stroke="#6b7280" stroke-width="2"/>
+                            <text x="225" y="330" text-anchor="middle" class="branch-label">Limited</text>
+                            <line x1="150" y1="340" x2="150" y2="380" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                            <g transform="translate(50, 380)">
+                                <rect width="200" height="60" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="100" y="25" text-anchor="middle" class="box-title">Third-Party</text>
+                                <text x="100" y="45" text-anchor="middle" class="box-subtitle">Custody</text>
+                            </g>
+
+                            <!-- Continue from Q2 -->
+                            <line x1="450" y1="400" x2="450" y2="460" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+                            <text x="470" y="430" class="branch-label">Strong Team</text>
+
+                            <!-- Question 3 -->
+                            <g transform="translate(300, 460)">
+                                <polygon points="150,0 300,60 150,120 0,60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="150" y="55" text-anchor="middle" class="decision-text">Control vs.</text>
+                                <text x="150" y="72" text-anchor="middle" class="decision-text">Convenience?</text>
+                            </g>
+
+                            <!-- Branch: Maximum control -->
+                            <line x1="300" y1="520" x2="150" y2="520" stroke="#6b7280" stroke-width="2"/>
+                            <text x="225" y="510" text-anchor="middle" class="branch-label">Control</text>
+                            <line x1="150" y1="520" x2="150" y2="560" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                            <g transform="translate(50, 560)">
+                                <rect width="200" height="60" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="100" y="25" text-anchor="middle" class="box-title">Self-Custody</text>
+                                <text x="100" y="45" text-anchor="middle" class="box-subtitle">Full Control</text>
+                            </g>
+
+                            <!-- Branch: Balance -->
+                            <line x1="600" y1="520" x2="750" y2="520" stroke="#6b7280" stroke-width="2"/>
+                            <text x="675" y="510" text-anchor="middle" class="branch-label">Balance</text>
+                            <line x1="750" y1="520" x2="750" y2="560" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                            <g transform="translate(650, 560)">
+                                <rect width="200" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+                                <text x="100" y="25" text-anchor="middle" class="box-title">Hybrid / MPC</text>
+                                <text x="100" y="45" text-anchor="middle" class="box-subtitle">Shared Control</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <h3>Key Evaluation Criteria</h3>
+                <div class="criteria-grid">
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h4>Security Architecture</h4>
+                        <ul>
+                            <li>Key generation methodology</li>
+                            <li>Storage infrastructure (HSM, MPC, cold storage)</li>
+                            <li>Physical security controls</li>
+                            <li>Penetration testing history</li>
+                            <li>Incident response procedures</li>
+                        </ul>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h4>Regulatory Status</h4>
+                        <ul>
+                            <li>Jurisdiction and licensing</li>
+                            <li>Qualified custodian status</li>
+                            <li>Banking charter (if applicable)</li>
+                            <li>SOC 1/2 audit reports</li>
+                            <li>Regulatory examination history</li>
+                        </ul>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <h4>Insurance Coverage</h4>
+                        <ul>
+                            <li>Policy limits and scope</li>
+                            <li>Covered events (theft, errors, etc.)</li>
+                            <li>Carrier ratings</li>
+                            <li>Claims history</li>
+                            <li>Excess coverage options</li>
+                        </ul>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h4>Operational Capabilities</h4>
+                        <ul>
+                            <li>Supported assets and networks</li>
+                            <li>Staking and DeFi access</li>
+                            <li>API and integration options</li>
+                            <li>Reporting and audit trails</li>
+                            <li>Transaction throughput</li>
+                        </ul>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4>Governance Controls</h4>
+                        <ul>
+                            <li>Policy engine flexibility</li>
+                            <li>Approval workflows</li>
+                            <li>Role-based access control</li>
+                            <li>Whitelisting capabilities</li>
+                            <li>Transaction limits</li>
+                        </ul>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h4>Business Terms</h4>
+                        <ul>
+                            <li>Fee structure transparency</li>
+                            <li>Minimum asset requirements</li>
+                            <li>Contract terms and SLAs</li>
+                            <li>Provider financial stability</li>
+                            <li>Exit provisions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provider Landscape Section -->
+        <section id="landscape" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>Provider Landscape</h2>
+                </div>
+                <p class="section-intro">The custody provider landscape includes specialized custodians, exchange-affiliated services, infrastructure providers, and traditional financial institutions entering the space. This categorization reflects how providers actually operate, not marketing positioning.</p>
+
+                <!-- Market Map Diagram -->
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Provider Category Map</h3>
+                    <div class="diagram-wrapper">
+                        <svg viewBox="0 0 900 600" class="market-map" aria-labelledby="marketMapTitle">
+                            <title id="marketMapTitle">Crypto Custody Provider Market Map</title>
+                            <defs>
+                                <linearGradient id="cat1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3b82f6"/>
+                                    <stop offset="100%" style="stop-color:#2563eb"/>
+                                </linearGradient>
+                                <linearGradient id="cat2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#7c3aed"/>
+                                </linearGradient>
+                                <linearGradient id="cat3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981"/>
+                                    <stop offset="100%" style="stop-color:#059669"/>
+                                </linearGradient>
+                                <linearGradient id="cat4Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f59e0b"/>
+                                    <stop offset="100%" style="stop-color:#d97706"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Category 1: Qualified Custodians -->
+                            <g transform="translate(20, 20)">
+                                <rect width="420" height="260" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+                                <rect width="420" height="45" rx="12" fill="url(#cat1Grad)"/>
+                                <rect x="0" y="33" width="420" height="12" fill="url(#cat1Grad)"/>
+                                <text x="210" y="30" text-anchor="middle" fill="white" class="category-title">Qualified / Regulated Custodians</text>
+
+                                <g transform="translate(20, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Coinbase Custody</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">NY Trust Company</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">SOC 1/2 Audited</text>
+                                </g>
+
+                                <g transform="translate(220, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Anchorage Digital</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Federal Bank Charter</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">OCC Regulated</text>
+                                </g>
+
+                                <g transform="translate(20, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">BitGo Trust</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">SD Trust Company</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Qualified Custodian</text>
+                                </g>
+
+                                <g transform="translate(220, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#dbeafe" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Fidelity Digital</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">NY Trust Company</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Traditional Finance Entry</text>
+                                </g>
+                            </g>
+
+                            <!-- Category 2: Technology/Infrastructure -->
+                            <g transform="translate(460, 20)">
+                                <rect width="420" height="260" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+                                <rect width="420" height="45" rx="12" fill="url(#cat2Grad)"/>
+                                <rect x="0" y="33" width="420" height="12" fill="url(#cat2Grad)"/>
+                                <text x="210" y="30" text-anchor="middle" fill="white" class="category-title">Technology / Infrastructure Providers</text>
+
+                                <g transform="translate(20, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#e9d5ff" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Fireblocks</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">MPC Infrastructure</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Wallet-as-a-Service</text>
+                                </g>
+
+                                <g transform="translate(220, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#e9d5ff" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Copper</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">MPC + ClearLoop</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Settlement Network</text>
+                                </g>
+
+                                <g transform="translate(20, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#e9d5ff" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Ledger Enterprise</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Hardware Security</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">HSM Solutions</text>
+                                </g>
+
+                                <g transform="translate(220, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#e9d5ff" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Dfns</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">MPC API Platform</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Developer-Focused</text>
+                                </g>
+                            </g>
+
+                            <!-- Category 3: Exchange-Affiliated -->
+                            <g transform="translate(20, 310)">
+                                <rect width="420" height="260" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+                                <rect width="420" height="45" rx="12" fill="url(#cat3Grad)"/>
+                                <rect x="0" y="33" width="420" height="12" fill="url(#cat3Grad)"/>
+                                <text x="210" y="30" text-anchor="middle" fill="white" class="category-title">Exchange-Affiliated Custody</text>
+
+                                <g transform="translate(20, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Kraken</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Exchange + Custody</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Integrated Services</text>
+                                </g>
+
+                                <g transform="translate(220, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Binance Custody</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Exchange-Linked</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Global Operations</text>
+                                </g>
+
+                                <g transform="translate(20, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Gemini Custody</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">NY Trust + Exchange</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">SOC Examined</text>
+                                </g>
+
+                                <g transform="translate(220, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#d1fae5" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Bitstamp</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Exchange Custody</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">European Focus</text>
+                                </g>
+                            </g>
+
+                            <!-- Category 4: Prime Brokerage / Full Service -->
+                            <g transform="translate(460, 310)">
+                                <rect width="420" height="260" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+                                <rect width="420" height="45" rx="12" fill="url(#cat4Grad)"/>
+                                <rect x="0" y="33" width="420" height="12" fill="url(#cat4Grad)"/>
+                                <text x="210" y="30" text-anchor="middle" fill="white" class="category-title">Prime Brokerage / Full Service</text>
+
+                                <g transform="translate(20, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Galaxy Digital</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Trading + Custody</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Institutional Services</text>
+                                </g>
+
+                                <g transform="translate(220, 60)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Hidden Road</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Prime Brokerage</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Multi-Venue Access</text>
+                                </g>
+
+                                <g transform="translate(20, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Falcon X</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">Prime + Custody</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">Credit Services</text>
+                                </g>
+
+                                <g transform="translate(220, 155)">
+                                    <rect width="180" height="80" rx="8" fill="white" stroke="#fef3c7" stroke-width="1"/>
+                                    <text x="90" y="30" text-anchor="middle" class="provider-name">Cowen Digital</text>
+                                    <text x="90" y="50" text-anchor="middle" class="provider-type">TradFi Entry</text>
+                                    <text x="90" y="68" text-anchor="middle" class="provider-detail">TD Cowen Integration</text>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="landscape-note">
+                    <p><strong>Note:</strong> This landscape represents a point-in-time view of a rapidly evolving market. Provider capabilities, regulatory status, and service offerings change frequently. The categorization reflects primary operating models; many providers offer services across multiple categories.</p>
+                </div>
+
+                <h3>Category Characteristics</h3>
+                <div class="category-details">
+                    <div class="category-detail">
+                        <div class="category-badge" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">Qualified Custodians</div>
+                        <p>Regulated entities operating under bank charters or trust company licenses. These providers can serve as "qualified custodians" for SEC-registered investment advisers, meeting specific regulatory requirements for client asset protection. Typically offer the most comprehensive regulatory coverage but may have higher minimums and more limited asset support.</p>
+                    </div>
+                    <div class="category-detail">
+                        <div class="category-badge" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">Technology/Infrastructure</div>
+                        <p>Providers focused on custody technology and infrastructure rather than direct custodial services. Often power other custodians' operations or provide wallet-as-a-service platforms. Typically offer MPC-based solutions, API-first architectures, and flexible deployment options. Clients maintain more direct control over keys.</p>
+                    </div>
+                    <div class="category-detail">
+                        <div class="category-badge" style="background: linear-gradient(135deg, #10b981, #059669);">Exchange-Affiliated</div>
+                        <p>Custody services offered by or closely connected to cryptocurrency exchanges. Provide convenience for active traders with integrated trading and custody. Regulatory status varies by entity and jurisdiction. Consideration of exchange-specific counterparty risk is warranted.</p>
+                    </div>
+                    <div class="category-detail">
+                        <div class="category-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">Prime Brokerage</div>
+                        <p>Full-service providers offering custody alongside trading, lending, and other financial services. Model similar to traditional finance prime brokerage relationships. May aggregate custody across multiple underlying providers. Suitable for institutions requiring comprehensive service bundles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operating Model / Control Stack Section -->
+        <section id="control-stack" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05.1</span>
+                    <h2>Operating Model: The Custody Control Stack</h2>
+                </div>
+                <p class="section-intro">Understanding how custody solutions actually operate requires examining the full stack of controls, from physical security to governance policies.</p>
+
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Custody Control Stack</h3>
+                    <div class="diagram-wrapper">
+                        <svg viewBox="0 0 800 550" class="control-stack-diagram" aria-labelledby="stackTitle">
+                            <title id="stackTitle">Custody Control Stack Diagram</title>
+                            <defs>
+                                <linearGradient id="stackGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#2563eb"/>
+                                </linearGradient>
+                                <linearGradient id="stackGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#7c3aed"/>
+                                </linearGradient>
+                                <linearGradient id="stackGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#059669"/>
+                                </linearGradient>
+                                <linearGradient id="stackGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#d97706"/>
+                                </linearGradient>
+                                <linearGradient id="stackGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#dc2626"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Stack layers -->
+                            <g transform="translate(50, 30)">
+                                <!-- Layer 5: Governance -->
+                                <g transform="translate(0, 0)">
+                                    <rect width="700" height="85" rx="8" fill="url(#stackGrad1)"/>
+                                    <text x="30" y="35" fill="white" class="stack-title">Governance &amp; Policy Layer</text>
+                                    <text x="30" y="55" fill="#94a3b8" class="stack-desc">Approval workflows • Role-based access • Transaction policies • Audit logging</text>
+                                    <text x="30" y="72" fill="#94a3b8" class="stack-desc">Whitelists • Velocity limits • Time locks • Multi-party authorization</text>
+                                    <circle cx="670" cy="42" r="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                                    <text x="670" y="48" text-anchor="middle" fill="white" class="layer-num">5</text>
+                                </g>
+
+                                <!-- Layer 4: Application -->
+                                <g transform="translate(0, 95)">
+                                    <rect width="700" height="85" rx="8" fill="url(#stackGrad2)"/>
+                                    <text x="30" y="35" fill="white" class="stack-title">Application Layer</text>
+                                    <text x="30" y="55" fill="#94a3b8" class="stack-desc">User interfaces • API endpoints • SDK integrations • Reporting dashboards</text>
+                                    <text x="30" y="72" fill="#94a3b8" class="stack-desc">Transaction builders • Address management • Asset tracking</text>
+                                    <circle cx="670" cy="42" r="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                                    <text x="670" y="48" text-anchor="middle" fill="white" class="layer-num">4</text>
+                                </g>
+
+                                <!-- Layer 3: Signing -->
+                                <g transform="translate(0, 190)">
+                                    <rect width="700" height="85" rx="8" fill="url(#stackGrad3)"/>
+                                    <text x="30" y="35" fill="white" class="stack-title">Signing &amp; Computation Layer</text>
+                                    <text x="30" y="55" fill="#94a3b8" class="stack-desc">MPC protocols • Threshold signatures • Multi-sig coordination • TEE enclaves</text>
+                                    <text x="30" y="72" fill="#94a3b8" class="stack-desc">Key derivation • Transaction signing • Secure computation</text>
+                                    <circle cx="670" cy="42" r="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                                    <text x="670" y="48" text-anchor="middle" fill="white" class="layer-num">3</text>
+                                </g>
+
+                                <!-- Layer 2: Key Storage -->
+                                <g transform="translate(0, 285)">
+                                    <rect width="700" height="85" rx="8" fill="url(#stackGrad4)"/>
+                                    <text x="30" y="35" fill="white" class="stack-title">Key Storage Layer</text>
+                                    <text x="30" y="55" fill="#94a3b8" class="stack-desc">HSM modules • Cold storage • Key shards • Encrypted backups</text>
+                                    <text x="30" y="72" fill="#94a3b8" class="stack-desc">Geographic distribution • Air-gapped systems • Key rotation</text>
+                                    <circle cx="670" cy="42" r="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                                    <text x="670" y="48" text-anchor="middle" fill="white" class="layer-num">2</text>
+                                </g>
+
+                                <!-- Layer 1: Physical -->
+                                <g transform="translate(0, 380)">
+                                    <rect width="700" height="85" rx="8" fill="url(#stackGrad5)"/>
+                                    <text x="30" y="35" fill="white" class="stack-title">Physical Security Layer</text>
+                                    <text x="30" y="55" fill="#94a3b8" class="stack-desc">Data centers • Biometric access • Video surveillance • Security personnel</text>
+                                    <text x="30" y="72" fill="#94a3b8" class="stack-desc">Faraday cages • Tamper-evident seals • Secure facilities</text>
+                                    <circle cx="670" cy="42" r="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                                    <text x="670" y="48" text-anchor="middle" fill="white" class="layer-num">1</text>
+                                </g>
+                            </g>
+
+                            <!-- Side annotation -->
+                            <g transform="translate(770, 200)">
+                                <line x1="0" y1="0" x2="0" y2="260" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+                                <text x="5" y="130" transform="rotate(90, 5, 130)" text-anchor="middle" class="side-label">Defense in Depth</text>
+                            </g>
+
+                            <!-- Bottom label -->
+                            <text x="400" y="530" text-anchor="middle" class="diagram-footer">Each layer must be evaluated when assessing a custody solution</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="stack-explanation">
+                    <div class="stack-item">
+                        <h4>Physical Security (Layer 1)</h4>
+                        <p>The foundation of custody security. Enterprise custody solutions typically utilize hardened data centers with 24/7 monitoring, biometric access controls, and redundant power/connectivity. Cold storage may involve geographically distributed secure facilities with strict access protocols.</p>
+                    </div>
+                    <div class="stack-item">
+                        <h4>Key Storage (Layer 2)</h4>
+                        <p>How and where private keys or key shares are stored. Options include Hardware Security Modules (HSMs), air-gapped computers, or distributed key shares across multiple locations. The storage approach directly impacts both security and operational flexibility.</p>
+                    </div>
+                    <div class="stack-item">
+                        <h4>Signing &amp; Computation (Layer 3)</h4>
+                        <p>The mechanisms for authorizing transactions. Multi-party computation (MPC) allows signing without reconstructing the full key. Threshold signatures require M-of-N participants. Traditional multi-sig uses on-chain mechanisms. Each approach has different security and operational characteristics.</p>
+                    </div>
+                    <div class="stack-item">
+                        <h4>Application (Layer 4)</h4>
+                        <p>The interfaces through which users interact with custody services. This includes web dashboards, mobile apps, APIs, and integrations with portfolio management systems. Security at this layer involves authentication, session management, and secure communications.</p>
+                    </div>
+                    <div class="stack-item">
+                        <h4>Governance &amp; Policy (Layer 5)</h4>
+                        <p>The business logic layer controlling how transactions are authorized. Policy engines can enforce approval workflows, velocity limits, whitelist restrictions, and time-based controls. This layer often differentiates enterprise solutions from consumer products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section id="use-cases" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2>Institutional Use Cases</h2>
+                </div>
+                <p class="section-intro">Different institutional participants have distinct custody requirements based on their business models, regulatory obligations, and operational needs.</p>
+
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                            </div>
+                            <h3>Asset Managers &amp; Funds</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Hedge funds, venture funds, family offices, and registered investment advisers managing crypto allocations for clients.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>Qualified custodian status for regulatory compliance</li>
+                                <li>Segregated accounts for investor reporting</li>
+                                <li>NAV calculation and audit support</li>
+                                <li>Trade execution integration</li>
+                                <li>Multi-strategy support (trading, staking, DeFi)</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Regulated qualified custodian, often with prime brokerage relationship for trading. May use multiple custodians for diversification.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                </svg>
+                            </div>
+                            <h3>Corporate Treasury</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Public and private companies holding digital assets as treasury reserves or for operational purposes.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>Board-level governance controls</li>
+                                <li>Audit-ready record keeping</li>
+                                <li>Integration with corporate accounting</li>
+                                <li>Insurance coverage aligned with treasury policy</li>
+                                <li>Clear SLAs and liability frameworks</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Qualified custodian with strong governance controls. Often prefer regulated entities for audit and reporting simplicity. May maintain some self-custody capability.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h3>Exchanges &amp; Trading Venues</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Centralized exchanges, OTC desks, and trading platforms that hold customer assets.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>High-throughput transaction signing</li>
+                                <li>Hot/warm/cold wallet architecture</li>
+                                <li>Instant settlement capabilities</li>
+                                <li>Multi-asset support across chains</li>
+                                <li>Proof of reserves capabilities</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Often build proprietary solutions using infrastructure providers (MPC platforms). May partner with qualified custodians for cold storage component. Focus on operational efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 1v22"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <h3>Banks &amp; Financial Institutions</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Traditional banks entering digital asset services, either for proprietary positions or client services.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>Bank-grade security standards</li>
+                                <li>Regulatory compliance (OCC, state regulators)</li>
+                                <li>Integration with existing infrastructure</li>
+                                <li>Sub-custody arrangements</li>
+                                <li>White-label capabilities</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Partner with established custody technology providers or qualified custodians. Focus on regulatory clarity and integration with existing systems. May pursue own regulatory approvals over time.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                            </div>
+                            <h3>Web3 Protocols &amp; DAOs</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Decentralized protocols, foundations, and DAOs managing treasury assets or protocol-controlled value.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>Transparent governance mechanisms</li>
+                                <li>Multi-sig with distributed signers</li>
+                                <li>On-chain verification capabilities</li>
+                                <li>DeFi protocol compatibility</li>
+                                <li>Decentralization-preserving solutions</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Self-custody via multi-sig wallets (Gnosis Safe/now Safe) with distributed signers. May use MPC for operational efficiency while maintaining decentralization principles. Hybrid approaches emerging.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="use-case-header">
+                            <div class="use-case-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                </svg>
+                            </div>
+                            <h3>High-Net-Worth Individuals</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p><strong>Profile:</strong> Wealthy individuals and family offices with significant personal crypto holdings.</p>
+                            <h4>Key Requirements</h4>
+                            <ul>
+                                <li>Privacy and discretion</li>
+                                <li>Estate planning integration</li>
+                                <li>Personal liability protection</li>
+                                <li>Flexible access for active management</li>
+                                <li>Tax reporting support</li>
+                            </ul>
+                            <h4>Typical Approach</h4>
+                            <p>Mix of self-custody (hardware wallets, multi-sig) and qualified custodian for larger holdings. Often work through family office structures. May use multiple solutions for diversification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-cases-note">
+                    <h4>How Institutions Should Use This Map</h4>
+                    <ol>
+                        <li><strong>Identify your profile:</strong> Understand which use case category (or combination) best describes your organization.</li>
+                        <li><strong>Assess requirements:</strong> Use the decision framework to identify must-have vs. nice-to-have features.</li>
+                        <li><strong>Evaluate providers:</strong> Map provider capabilities against your requirements, considering the control stack.</li>
+                        <li><strong>Plan for evolution:</strong> Custody needs change as organizations mature—consider flexibility and portability.</li>
+                        <li><strong>Conduct due diligence:</strong> This map is a starting point; detailed provider evaluation requires direct engagement and technical review.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2>Methodology &amp; Neutrality Statement</h2>
+                </div>
+
+                <div class="methodology-content">
+                    <div class="methodology-main">
+                        <h3>About This Resource</h3>
+                        <p>This landscape overview is produced by the Enterprise Ethereum Alliance (EEA) as an educational resource for institutional participants evaluating digital asset custody solutions. The content is intended to provide a framework for understanding the custody landscape, not to recommend specific providers or solutions.</p>
+
+                        <h3>Methodology</h3>
+                        <p>The information presented is compiled from publicly available sources including:</p>
+                        <ul>
+                            <li>Provider websites and published documentation</li>
+                            <li>Regulatory filings and public records</li>
+                            <li>Industry reports and analysis</li>
+                            <li>Technical documentation and whitepapers</li>
+                            <li>News and press coverage</li>
+                        </ul>
+                        <p>Categorization reflects observed operating models based on public information. Providers may offer services across multiple categories, and the primary categorization reflects the most prominent positioning.</p>
+
+                        <h3>Limitations</h3>
+                        <ul>
+                            <li>This is a point-in-time snapshot of a rapidly evolving market</li>
+                            <li>Provider capabilities and regulatory status change frequently</li>
+                            <li>Not all providers are included; selection reflects prominence in institutional markets</li>
+                            <li>No independent verification of provider claims has been conducted</li>
+                            <li>This is not investment, legal, or regulatory advice</li>
+                        </ul>
+
+                        <h3>Neutrality Principles</h3>
+                        <p>This resource adheres to the following principles:</p>
+                        <ul>
+                            <li><strong>No endorsements:</strong> Inclusion does not constitute recommendation or endorsement</li>
+                            <li><strong>No competitive rankings:</strong> Providers are categorized by operating model, not quality</li>
+                            <li><strong>No commercial relationships:</strong> Content is not influenced by provider sponsorship</li>
+                            <li><strong>Educational purpose:</strong> Information is provided for educational use only</li>
+                            <li><strong>Transparency:</strong> Methodology and limitations are clearly stated</li>
+                        </ul>
+                    </div>
+                    <aside class="methodology-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Update Frequency</h4>
+                            <p>This resource is reviewed and updated periodically. The digital asset custody landscape evolves rapidly; users should verify current information directly with providers.</p>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Feedback</h4>
+                            <p>Corrections, updates, and feedback are welcome. Contact the EEA to suggest improvements or report inaccuracies.</p>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Disclaimer</h4>
+                            <p>This content is for informational purposes only and does not constitute financial, legal, or investment advice. Users should conduct their own due diligence before making custody decisions.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- EEA Engagement Section -->
+        <section id="engagement" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">08</span>
+                    <h2>EEA Engagement &amp; Framework Validation</h2>
+                </div>
+
+                <div class="engagement-content">
+                    <div class="engagement-intro">
+                        <p class="lead">The Enterprise Ethereum Alliance is committed to developing credible, industry-informed resources that benefit the entire ecosystem. We invite custody providers and institutional participants to engage with this framework.</p>
+                    </div>
+
+                    <div class="engagement-grid">
+                        <div class="engagement-card">
+                            <h3>For Custody Providers</h3>
+                            <p>We welcome custody providers to:</p>
+                            <ul>
+                                <li><strong>Validate categorization:</strong> Review how your organization is represented and provide corrections or clarifications</li>
+                                <li><strong>Contribute insights:</strong> Share perspectives on custody trends, emerging requirements, and market evolution</li>
+                                <li><strong>Participate in working groups:</strong> Join EEA initiatives focused on custody standards and best practices</li>
+                                <li><strong>Engage with membership:</strong> Learn about EEA membership benefits and how participation advances industry standards</li>
+                            </ul>
+                            <p>Provider engagement helps ensure this resource accurately reflects the market and serves institutional needs.</p>
+                        </div>
+
+                        <div class="engagement-card">
+                            <h3>For Institutional Users</h3>
+                            <p>Institutions evaluating custody solutions can:</p>
+                            <ul>
+                                <li><strong>Use this framework:</strong> Apply the decision framework and evaluation criteria to your specific needs</li>
+                                <li><strong>Share requirements:</strong> Help us understand what institutional users need from custody resources</li>
+                                <li><strong>Request deeper dives:</strong> Suggest topics for expanded coverage or additional analysis</li>
+                                <li><strong>Join the conversation:</strong> Participate in EEA events and working groups on custody topics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="engagement-cta">
+                        <h3>About the Enterprise Ethereum Alliance</h3>
+                        <p>The EEA is a member-driven standards organization whose charter is to develop open blockchain specifications that drive harmonization and interoperability for businesses and consumers worldwide. Our global community of members includes leaders across industries working together to create enterprise-grade solutions.</p>
+                        <p>This custody landscape resource represents one element of EEA's broader work to support institutional adoption of blockchain technology through education, standards development, and ecosystem coordination.</p>
+                        <div class="cta-buttons">
+                            <a href="https://entethalliance.org" class="btn btn-primary" target="_blank" rel="noopener">Learn More About EEA</a>
+                            <a href="https://entethalliance.org/become-a-member/" class="btn btn-secondary" target="_blank" rel="noopener">Membership Information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">EEA</span>
+                        <span class="logo-divider"></span>
+                        <span class="logo-subtitle">Enterprise Ethereum Alliance</span>
+                    </div>
+                    <p>Driving business adoption of Ethereum blockchain technology through standards development, education, and ecosystem initiatives.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>This Resource</h4>
+                        <ul>
+                            <li><a href="#what-is-custody">What is Custody</a></li>
+                            <li><a href="#custody-models">Custody Models</a></li>
+                            <li><a href="#framework">Decision Framework</a></li>
+                            <li><a href="#landscape">Provider Landscape</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>EEA</h4>
+                        <ul>
+                            <li><a href="https://entethalliance.org/about/" target="_blank" rel="noopener">About</a></li>
+                            <li><a href="https://entethalliance.org/become-a-member/" target="_blank" rel="noopener">Membership</a></li>
+                            <li><a href="https://entethalliance.org/working-groups/" target="_blank" rel="noopener">Working Groups</a></li>
+                            <li><a href="https://entethalliance.org/contact/" target="_blank" rel="noopener">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Enterprise Ethereum Alliance. This resource is provided for educational purposes only.</p>
+                <p class="footer-disclaimer">This content does not constitute financial, legal, or investment advice. Conduct your own due diligence before making custody decisions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
