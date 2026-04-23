@@ -29,9 +29,12 @@
                 <li><a href="#custody-models">Models</a></li>
                 <li><a href="#framework">Framework</a></li>
                 <li><a href="#landscape">Landscape</a></li>
+                <li><a href="#readiness-matrix">Readiness</a></li>
+                <li><a href="#interoperability">Integration</a></li>
+                <li><a href="#asset-standards">Assets</a></li>
+                <li><a href="#risk-framework">Risk</a></li>
                 <li><a href="#use-cases">Use Cases</a></li>
                 <li><a href="#methodology">Methodology</a></li>
-                <li><a href="#engagement">Engagement</a></li>
             </ul>
         </div>
     </nav>
@@ -944,6 +947,499 @@
                         <h4>Governance &amp; Policy (Layer 5)</h4>
                         <p>The business logic layer controlling how transactions are authorized. Policy engines can enforce approval workflows, velocity limits, whitelist restrictions, and time-based controls. This layer often differentiates enterprise solutions from consumer products.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provider Readiness Matrix Section -->
+        <section id="readiness-matrix" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05.2</span>
+                    <h2>Provider Readiness Matrix</h2>
+                </div>
+                <p class="section-intro">This matrix provides a structural comparison of custody providers across key institutional dimensions. Categorization is based on publicly disclosed information and does not constitute an endorsement or quality ranking.</p>
+
+                <div class="matrix-container">
+                    <div class="matrix-wrapper">
+                        <table class="readiness-matrix-table">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Operating Model</th>
+                                    <th>Regulatory Posture</th>
+                                    <th>Institutional Orientation</th>
+                                    <th>Asset Breadth</th>
+                                    <th>Tokenized Asset Readiness</th>
+                                    <th>Interoperability Style</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Anchorage Digital</strong></td>
+                                    <td>Federally chartered bank</td>
+                                    <td>OCC federal bank charter; highest US regulatory tier</td>
+                                    <td>Banks, pension funds, registered advisers</td>
+                                    <td>~60 curated assets</td>
+                                    <td>Dual custody support; settlement integration</td>
+                                    <td>Direct custody; fiat rails</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BitGo</strong></td>
+                                    <td>Qualified custodian + infrastructure</td>
+                                    <td>OCC national charter (Dec 2025); SD trust</td>
+                                    <td>ETF issuers, funds, tokenization platforms</td>
+                                    <td>1,550+ assets across 69 chains</td>
+                                    <td>WBTC custodian; broad RWA support</td>
+                                    <td>Multi-sig + TSS; API-first</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Coinbase Custody</strong></td>
+                                    <td>Exchange-integrated custodian</td>
+                                    <td>NYDFS Trust Company; qualified custodian</td>
+                                    <td>ETF sponsors, corporates, advisers</td>
+                                    <td>470+ assets</td>
+                                    <td>Limited; focus on native assets</td>
+                                    <td>Exchange liquidity integration</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fireblocks</strong></td>
+                                    <td>Technology / infrastructure provider</td>
+                                    <td>NYDFS Trust (2024); primarily infrastructure</td>
+                                    <td>Exchanges, banks, neobanks (sub-custody)</td>
+                                    <td>1,400+ tokens, 50+ chains</td>
+                                    <td>Tokenization rails; stablecoin support</td>
+                                    <td>MPC-CMP; 1,200+ counterparty network</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Copper</strong></td>
+                                    <td>Prime custody</td>
+                                    <td>FCA registered (UK); MiCA pending</td>
+                                    <td>Hedge funds, trading firms</td>
+                                    <td>Multi-chain support</td>
+                                    <td>Developing</td>
+                                    <td>ClearLoop off-exchange settlement</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Zodia Custody</strong></td>
+                                    <td>Bank-backed custodian</td>
+                                    <td>JFSC, FCA; multi-jurisdictional</td>
+                                    <td>Asset managers, family offices</td>
+                                    <td>Curated institutional set</td>
+                                    <td>Traditional-finance bridge</td>
+                                    <td>HSM + MPC hybrid</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Komainu</strong></td>
+                                    <td>Bank-backed custodian</td>
+                                    <td>Jersey, Dubai VARA</td>
+                                    <td>Institutional asset managers</td>
+                                    <td>Curated set</td>
+                                    <td>Ledger partnership</td>
+                                    <td>Segregated custody</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kraken</strong></td>
+                                    <td>Exchange custodian</td>
+                                    <td>Wyoming SPDI (Kraken Bank)</td>
+                                    <td>Mid-market institutions, crypto-native</td>
+                                    <td>200+ assets</td>
+                                    <td>Limited</td>
+                                    <td>Trading integration; staking</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fidelity Digital Assets</strong></td>
+                                    <td>Traditional finance custodian</td>
+                                    <td>NY Trust; OCC conditional approval (Dec 2025)</td>
+                                    <td>ETF sponsors, asset managers</td>
+                                    <td>Select major assets</td>
+                                    <td>Fund administration integration</td>
+                                    <td>Traditional custody rails</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BNY Mellon</strong></td>
+                                    <td>Traditional finance incumbent</td>
+                                    <td>Federal bank supervision; post-SAB 121</td>
+                                    <td>ETF sponsors, pension funds</td>
+                                    <td>Bitcoin, Ether (expanding)</td>
+                                    <td>On-chain NAV services</td>
+                                    <td>Fund admin integration</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="matrix-notes">
+                    <p><strong>Note:</strong> This matrix reflects publicly available information as of April 2026. Operating models and regulatory status are subject to change. "Tokenized Asset Readiness" refers to capacity to custody tokenized real-world assets alongside native crypto; not all providers have disclosed detailed capabilities. Inclusion does not constitute endorsement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interoperability & Integration Patterns Section -->
+        <section id="interoperability" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05.3</span>
+                    <h2>Interoperability &amp; Integration Patterns</h2>
+                </div>
+                <p class="section-intro">Institutional custody does not operate in isolation. Custodians connect to a broader ecosystem of exchanges, sub-custodians, staking providers, and settlement networks. Understanding these integration patterns is essential for evaluating operational fit.</p>
+
+                <div class="integration-grid">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h4>Exchange Connectivity</h4>
+                        <p>Custodians may integrate directly with exchanges for trading, or maintain settlement relationships that allow assets to remain in cold storage while trading occurs. Off-exchange settlement networks (e.g., Copper ClearLoop, Fireblocks Network) enable trading across venues without prefunding or asset movement.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h4>Sub-Custody Arrangements</h4>
+                        <p>Banks and traditional institutions often use crypto-native firms as sub-custodians for key management while maintaining the primary custodial relationship. MiCA and US interagency guidance address liability allocation in these arrangements. The primary custodian retains responsibility even when key management is delegated.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h4>MPC Infrastructure Stacks</h4>
+                        <p>Multi-party computation (MPC) providers offer key-shard distribution across parties. Fireblocks uses MPC-CMP with Intel SGX enclaves; Copper employs 2-of-3 sharding. Some institutions operate hybrid models where they hold one share while the provider holds another, ensuring no single party can move assets unilaterally.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/>
+                            </svg>
+                        </div>
+                        <h4>Omnibus Accounts</h4>
+                        <p>Some custodians pool client assets in omnibus wallets with internal ledger segregation. This approach offers operational efficiency but introduces reconciliation complexity and potential insolvency exposure. MiCA Article 75(7) requires on-chain segregation for EU CASPs; US practices vary.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </div>
+                        <h4>Staking Provider Integration</h4>
+                        <p>Institutional staking requires separation of validator keys (online, signing blocks) from withdrawal keys (cold storage). Custodians may operate validators directly, delegate to third-party operators, or support client-selected operators. Slashing liability allocation varies by provider and contract.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h4>Smart-Contract Wallets</h4>
+                        <p>Account abstraction (EIP-4337, EIP-7702) enables programmable wallet logic including multi-approver thresholds, time-locks, and recovery mechanisms. Safe (formerly Gnosis Safe) is the dominant EVM multi-sig framework. Custodians increasingly support or integrate with smart-contract wallet architectures for governance flexibility.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                            </svg>
+                        </div>
+                        <h4>Tokenization Workflows</h4>
+                        <p>Tokenized real-world assets require dual custody: traditional custodians hold underlying assets (Treasuries, securities) while crypto custodians manage on-chain tokens. BNY Mellon, Securitize, and specialized platforms coordinate these flows. The DTC's December 2025 no-action relief enables tokenized entitlements for participants.</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h4>Off-Exchange Settlement Rails</h4>
+                        <p>Bilateral and multilateral settlement networks allow institutions to trade without moving assets from cold storage. Assets are mirrored or pledged within the network; settlement occurs via book-entry adjustments. This reduces counterparty exposure and prefunding requirements for active traders.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>Interoperability Gaps</h4>
+                    <p>No SWIFT-equivalent messaging standard exists between crypto custodians. Institutional transfers rely on on-chain movements, proprietary networks, or bilateral arrangements. Permissioned tokens (e.g., ERC-3643) require re-whitelisting at each custodian. These gaps increase operational friction for institutions operating across multiple providers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asset & Standards Support Section -->
+        <section id="asset-standards" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05.4</span>
+                    <h2>Asset &amp; Standards Support</h2>
+                </div>
+                <p class="section-intro">Custody requirements vary significantly by asset type. Different asset classes present distinct technical, regulatory, and operational considerations that affect provider selection.</p>
+
+                <div class="asset-categories-grid">
+                    <div class="asset-category-card">
+                        <div class="asset-category-header native">
+                            <h4>Native Crypto Assets</h4>
+                            <span class="asset-tag">BTC, ETH, SOL, etc.</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Layer-1 protocol tokens with established custody models. Bitcoin and Ether have mature institutional infrastructure; newer L1s may have limited qualified custodian support.</p>
+                            <ul>
+                                <li>Well-established cold storage practices</li>
+                                <li>Broad custodian support</li>
+                                <li>Clear regulatory treatment in most jurisdictions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header stablecoin">
+                            <h4>Stablecoins</h4>
+                            <span class="asset-tag">USDC, USDT, EURC</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Fiat-pegged tokens with issuer-specific considerations. The GENIUS Act (July 2025) established a federal payment-stablecoin framework in the US; MiCA distinguishes asset-referenced tokens and e-money tokens.</p>
+                            <ul>
+                                <li>Issuer regulatory status varies</li>
+                                <li>Reserve transparency requirements</li>
+                                <li>May involve payment-services licensing overlay</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header erc20">
+                            <h4>ERC-20 &amp; Fungible Tokens</h4>
+                            <span class="asset-tag">Protocol tokens, governance</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Standard fungible tokens on EVM chains. Custody is technically straightforward but asset-specific due diligence is required for each token's smart-contract risk and regulatory classification.</p>
+                            <ul>
+                                <li>Broad custodian support for major tokens</li>
+                                <li>Smart-contract risk at token level</li>
+                                <li>Governance/voting support varies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header staked">
+                            <h4>Staked Assets</h4>
+                            <span class="asset-tag">stETH, validator positions</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Assets locked in proof-of-stake validation. Requires separation of validator keys (hot) from withdrawal keys (cold). The May 2025 SEC staff statement addresses non-discretionary staking; MiCA ESMA Q&A 2067 addresses CASP liability.</p>
+                            <ul>
+                                <li>Key separation architecture required</li>
+                                <li>Slashing liability allocation varies</li>
+                                <li>Liquid staking tokens add complexity</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header smartwallet">
+                            <h4>Smart-Contract Wallets / Safe</h4>
+                            <span class="asset-tag">Multi-sig, account abstraction</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Programmable wallet contracts with embedded governance logic. Safe is the dominant EVM standard. EIP-7702 (Pectra upgrade) expanded account abstraction capabilities.</p>
+                            <ul>
+                                <li>Customizable approval thresholds</li>
+                                <li>Recovery mechanisms possible</li>
+                                <li>Smart-contract risk at wallet layer</li>
+                                <li>Key rotation without address change</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header permissioned">
+                            <h4>Permissioned Token Standards</h4>
+                            <span class="asset-tag">ERC-3643, transfer restrictions</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>Tokens with embedded compliance logic restricting transfers to whitelisted addresses. ERC-3643 is a leading standard for regulated securities on-chain. Portability between custodians requires re-whitelisting.</p>
+                            <ul>
+                                <li>Identity and compliance integration required</li>
+                                <li>Transfer restrictions limit custodian flexibility</li>
+                                <li>Issuer coordination for custodian changes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="asset-category-card">
+                        <div class="asset-category-header tokenized">
+                            <h4>Tokenized Funds &amp; Vault Wrappers</h4>
+                            <span class="asset-tag">BUIDL, BENJI, tokenized Treasuries</span>
+                        </div>
+                        <div class="asset-category-content">
+                            <p>On-chain representations of traditional fund shares or treasury positions. Require dual custody architecture: traditional custodian for underlying assets, crypto custodian for tokens. Market grew significantly through 2025.</p>
+                            <ul>
+                                <li>Dual custody complexity</li>
+                                <li>NAV calculation integration</li>
+                                <li>Custodian-of-record questions under Advisers Act</li>
+                                <li>Fund administrator coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landscape-note">
+                    <p><strong>Custody Selection Implication:</strong> Asset mix significantly shapes custodian selection. Institutions holding only Bitcoin and Ether have broad options. Those with staked positions, governance tokens, or tokenized assets require providers with specific capabilities. Verify current support directly with providers, as asset coverage evolves rapidly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Framework Section -->
+        <section id="risk-framework" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05.5</span>
+                    <h2>Risk Framework for Custody Decisions</h2>
+                </div>
+                <p class="section-intro">Custody risk is multi-dimensional. Institutions should evaluate potential providers across distinct risk categories rather than conflating them into a single assessment. Each dimension requires separate analysis and mitigation strategies.</p>
+
+                <div class="risk-framework-grid">
+                    <div class="risk-card">
+                        <div class="risk-header operational">
+                            <div class="risk-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4"/>
+                                </svg>
+                            </div>
+                            <h4>Operational Risk</h4>
+                        </div>
+                        <div class="risk-content">
+                            <p>Risk of loss from internal failures, errors, or security breaches within the custody operation.</p>
+                            <h5>Key Considerations</h5>
+                            <ul>
+                                <li>Key ceremony procedures and audit history</li>
+                                <li>Employee access controls and segregation of duties</li>
+                                <li>Incident response and disaster recovery capabilities</li>
+                                <li>Penetration testing and security audit results</li>
+                                <li>SOC 1/2 Type II attestation status</li>
+                            </ul>
+                            <h5>Mitigants</h5>
+                            <p>SOC reports, insurance coverage (crime, cyber, E&O), documented key ceremonies, and multi-party authorization requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-header counterparty">
+                            <div class="risk-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                </svg>
+                            </div>
+                            <h4>Counterparty Risk</h4>
+                        </div>
+                        <div class="risk-content">
+                            <p>Risk of loss if the custodian fails financially or operationally. The FTX collapse demonstrated this risk can materialize rapidly and severely.</p>
+                            <h5>Key Considerations</h5>
+                            <ul>
+                                <li>Custodian financial stability and capitalization</li>
+                                <li>Asset segregation: on-chain vs. omnibus</li>
+                                <li>Bankruptcy remoteness of client assets</li>
+                                <li>Regulatory capital requirements</li>
+                                <li>Proof of reserves methodology</li>
+                            </ul>
+                            <h5>Mitigants</h5>
+                            <p>Segregated custody (MiCA Art. 75(7) requires this for EU CASPs), regulatory capital requirements, qualified custodian status, and clear contractual title to assets.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-header governance">
+                            <div class="risk-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h4>Governance / Control Risk</h4>
+                        </div>
+                        <div class="risk-content">
+                            <p>Risk arising from inadequate oversight, unclear authorization processes, or concentration of control that enables unauthorized actions.</p>
+                            <h5>Key Considerations</h5>
+                            <ul>
+                                <li>Policy engine flexibility and enforcement</li>
+                                <li>Multi-party authorization requirements</li>
+                                <li>Whitelist and velocity limit capabilities</li>
+                                <li>Audit trail completeness</li>
+                                <li>Key-share distribution (for MPC/multi-sig)</li>
+                            </ul>
+                            <h5>Mitigants</h5>
+                            <p>MPC or multi-sig architectures where no single party can move assets; configurable policy engines; client-held key shares; immutable audit logs.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-header smartcontract">
+                            <div class="risk-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h4>Smart-Contract / Policy Risk</h4>
+                        </div>
+                        <div class="risk-content">
+                            <p>Risk from vulnerabilities in smart contracts used for custody (multi-sig wallets, account abstraction) or in assets being custodied (token contracts, DeFi protocols).</p>
+                            <h5>Key Considerations</h5>
+                            <ul>
+                                <li>Wallet contract audit history</li>
+                                <li>DeFi protocol whitelisting criteria</li>
+                                <li>Bridge and L2 exposure policies</li>
+                                <li>Oracle and MEV considerations</li>
+                                <li>Policy engine logic correctness</li>
+                            </ul>
+                            <h5>Mitigants</h5>
+                            <p>Audited and battle-tested contracts (Safe has extensive track record); policy engines with allowlists for contract interactions; specialized smart-contract insurance; transaction simulation before execution.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-header regulatory">
+                            <div class="risk-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                </svg>
+                            </div>
+                            <h4>Regulatory / Perimeter Risk</h4>
+                        </div>
+                        <div class="risk-content">
+                            <p>Risk that regulatory changes affect custodian viability, service continuity, or the institution's ability to use a particular provider. Includes cross-border complexity.</p>
+                            <h5>Key Considerations</h5>
+                            <ul>
+                                <li>Custodian licensing status and jurisdiction</li>
+                                <li>MiCA transition deadline (July 2026) compliance</li>
+                                <li>US qualified custodian status for RIAs</li>
+                                <li>Cross-border custody restrictions</li>
+                                <li>Regulatory examination history</li>
+                            </ul>
+                            <h5>Mitigants</h5>
+                            <p>Use of custodians with clear regulatory standing; monitoring transitional deadlines; multi-custodian arrangements for jurisdictional diversification; contractual provisions for regulatory change scenarios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-framework-note">
+                    <h4>Applying the Risk Framework</h4>
+                    <p>These risk dimensions should be evaluated separately, not averaged into a single score. A provider may have strong operational controls but weak counterparty protections (or vice versa). Institutions should weight each dimension according to their specific risk tolerance, regulatory requirements, and use case. The right custody solution minimizes total risk across all dimensions relevant to your profile—not just the most visible ones.</p>
                 </div>
             </div>
         </section>
